@@ -81,7 +81,7 @@ const elementJS = React.createElement(
   { className: 'titre' },
   'Bonjour JavaScript pur'
 );
-```text
+```
 
 
 
@@ -97,7 +97,7 @@ function withLogging(WrappedComponent) {
     return <WrappedComponent {...props} />;
   };
 }
-```text
+```
 
 
 
@@ -158,6 +158,7 @@ expect(screen.getByText('Compteur : 1')).toBeInTheDocument();
 
 
 
+## Démonstration du vidéo
 
 
 
@@ -167,6 +168,9 @@ expect(screen.getByText('Compteur : 1')).toBeInTheDocument();
 
 
 
+
+
+https://github.com/user-attachments/assets/a4f68538-2fa4-4789-b918-c2db794f565b
 
 
 
