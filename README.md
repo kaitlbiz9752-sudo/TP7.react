@@ -49,6 +49,8 @@ npm start
  http://localhost:3000
 
 
+## Sommaire des Étapes
+
 
 
 | Étape | Sujet                | Description                           |
@@ -63,6 +65,116 @@ npm start
 | 8     | Tests d’intégration  | `Counter.test.js`                     |
 | 9     | Exercices            | HOC avancé, filtrage, formulaire      |
 | 10    | Projet final         | Structuration complète                |
+
+
+
+## Aperçu des fonctionnalités
+
+
+ 1. JSX vs JavaScript pur
+
+```text
+const elementJSX = <h1 className="titre">Bonjour JSX</h1>;
+
+const elementJS = React.createElement(
+  'h1',
+  { className: 'titre' },
+  'Bonjour JavaScript pur'
+);
+```text
+
+
+
+ 2. Higher-Order Component (HOC)
+
+
+
+```text
+Exemple : HOC de logging
+function withLogging(WrappedComponent) {
+  return function EnhancedComponent(props) {
+    console.log('Props reçues :', props);
+    return <WrappedComponent {...props} />;
+  };
+}
+```text
+
+
+
+
+
+ 3. Render Props
+
+
+```text
+<DataLoader render={(data) => (
+  <ul>
+    {data.map((n) => <li key={n}>{n}</li>)}
+  </ul>
+)} />
+```
+
+
+
+🔹 4. Tests React
+
+
+**Test unitaire**
+
+
+```text
+expect(screen.getByText('Bonjour, Alice')).toBeInTheDocument();
+```
+
+
+
+
+**Test d’intégration**
+
+
+
+```text
+fireEvent.click(button);
+expect(screen.getByText('Compteur : 1')).toBeInTheDocument();
+```
+
+
+## Structure du projet
+
+<img width="643" height="1079" alt="image" src="https://github.com/user-attachments/assets/89dbbed5-4cba-4945-9ab0-1f3de093b776" />
+
+
+
+## Concepts maîtrisés
+
+- JSX & Babel
+-  Composition
+ - HOC (Higher-Order Components)
+- Render Props
+- useState
+- Tests unitaires (React Testing Library)
+ - Tests d’interaction
+- Architecture propre et modulaire
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
